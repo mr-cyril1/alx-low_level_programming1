@@ -1,11 +1,15 @@
 #include <stdio.h>
+
 /**
- * main - Prints the numbers from 0-9.
-(*
- * Return: 0 on success
+ * main - prints all single digit numbers of base 10 starting from zero
+ * Return: 0
  */
 int main(void)
 {
-	printf("0123456789\n");
+	int i;
+
+	for (i = 48; i <= 57; i++)
+		putchar(i);
+	putchar('\n');
 	return (0);
 }

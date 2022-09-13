@@ -1,24 +1,23 @@
 #include <stdio.h>
+
 /**
- * main - prints all possible combinations of single digit numbers.
-(*
- * Return: 0 on success
+ * main - print all possible combination of single digit numbers
+ * Return: 0
  */
 int main(void)
 {
-	int i = '0';
+	int i;
 
-	while (i <= '9')
+	for (i = 48; i <= 57; i++)
 	{
 		putchar(i);
-		if (i != '9')
+		if (i == 57)
 		{
-			putchar(',');
-			putchar(' ');
+			break;
 		}
-		++i;
+		putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
 	return (0);
-
 }

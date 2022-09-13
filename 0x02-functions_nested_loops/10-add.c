@@ -1,11 +1,13 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * add - adds two numbers together.
- * @i: The first number to be added.
- * @j: The second number to be added.
- * Return: the sum of two numbers.
+ * add - it adds two integrs
+ * @a: first integer
+ * @b: second integer to be added to first
+ * Return: the added integer
  */
-int add(int i, int j)
+int add(int a, int b)
 {
-	return (i + j);
+	a += b;
+	return (a);
 }

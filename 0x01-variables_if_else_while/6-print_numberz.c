@@ -1,20 +1,15 @@
 #include <stdio.h>
+
 /**
- * main - prints numbers 0-9 without using char or printf/puts,
- * and putchar 2x max
-(*
- * Return: 0 on success
+ * main - it print all single digit numbers of base 10 using "putchar"
+ * Return: 0
  */
 int main(void)
 {
-	int i = '0';
+	int i;
 
-	while (i <= '9')
-	{
+	for (i = 48; i <= 57; i++)
 		putchar(i);
-		i++;
-	}
 	putchar('\n');
 	return (0);
 }
-

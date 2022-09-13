@@ -1,42 +1,38 @@
 #include <stdio.h>
+
 /**
- * main - print numbers from 00 to 99.
-(*
- * Return: 0 on success
+ * main - it print all possible different combination of three digits,
+ *   the three digit must be different.
+ * 012, 120, 102, 021, 210 are considered the same combination of the digit 0,1
+ *  ,2.
+  * print only the smallest combination of three digits and in ascending order.
+ * Return: 0
  */
 int main(void)
 {
-	int i = '0';
-	int j = '0';
-	int k = '0';
+	int i, j, k;
 
-	while (i <= '7')
+	/*set 1^st, 2^nd & 3^rd digit to range 0-9, 1-9, & 2-9 using ASCII*/
+	for (i = 48; i <= 57; i++)
 	{
-		while (j <= '8')
+		for (j = 49; j <= 57; j++)
 		{
-			while (k <= '9')
+			for (k = 50; k <= 57; k++)
 			{
-				if (i < j && j < k)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(k);
-					if (!(i == '7' && j == '8' && k == '9'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
-
-				}
-				k++;
+			    /*checking if (1st <= 2nd <= 3rd)digit if yes skip*/
+				if ((i >= j || j >= k))
+					continue;
+				putchar(i);
+				putchar(j);
+				putchar(k);
+			  /*elminating the ',' and ' ' at the end of our line*/
+				if (i == 55)
+					break;
+				putchar(',');
+				putchar(' ');
 			}
-			k = '0';
-			j++;
 		}
-		j = '0';
-		i++;
 	}
 	putchar('\n');
 	return (0);
 }
-

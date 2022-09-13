@@ -1,7 +1,9 @@
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- * main - Prints out a string to stdout.
- * Return: 0 if success.
+ * main - contains the printf function
+ *
+ * Return: It always return 0
  */
 int main(void)
 {

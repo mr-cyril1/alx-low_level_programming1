@@ -1,45 +1,93 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * print_times_table - prints the times table for n.
- * @n: The multiplication table requested.
- * Return: Nothing.
+ * long_value - print numbers greater than  9 with putchar
+ * @val: the number
+ * Return: nothing
+ */
+void long_value(int val)
+{
+	if (val / 10)
+		long_value(val / 10);
+	/* print the last digit */
+	_putchar(val % 10 + '0');
+}
+
+/**
+ * space - required space
+ * Return: nothing
+ */
+void space(void)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+	_putchar(' ');
+}
+
+/**
+ * less_than_100 - if the count is greater than or equal 100
+ * Return: nothing
+ */
+void less_than_100(void)
+{
+	_putchar(',');
+	_putchar(' ');
+	_putchar(' ');
+}
+
+/**
+ * more_than_100 - count is more than 100
+ * Return: nothing
+ */
+
+void more_than_100(void)
+{
+	_putchar(',');
+	_putchar(' ');
+}
+/**
+ * print_times_table - print nth times table
+ * @n: the number of times table to be printed
+ * Return: nothing
  */
 void print_times_table(int n)
 {
-	int i, j, res;
+	int i, j, count;
 
-	if (!(n > 15 || n < 0))
+	if (n >= 0 && n <= 15)
 	{
 		for (i = 0; i <= n; i++)
 		{
-			for (j = 0; j <= n; j++)
+			_putchar('0');
+			if (i != n)
+				space();
+		}
+		for (i = 0; i <= n; i++)
+		{
+			for (count = 0; count <= n; count++)
 			{
-				res = (i * j);
-				if (j != 0)
+				j = i;
+				j *= count;
+				if (j == 0 && i >= 1)
 				{
-					_putchar(',');
-					_putchar(' ');
+					_putchar('0');
 				}
-				if (res < 10 && j != 0)
+				if (j > 0 && j <= 9)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((res % 10) + '0');
+					space();
+					_putchar(j + '0');
 				}
-				else if (res >= 10 && res < 100)
+				if (j > 9 && j < 100)
 				{
-					_putchar(' ');
-					_putchar((res / 10) + '0');
-					_putchar((res % 10) + '0');
+					less_than_100();
+					long_value(j);
 				}
-				else if (res >= 100 && j != 0)
+				if (j >= 100)
 				{
-					_putchar((res / 100) + '0');
-					_putchar((res / 10) % 10 + '0');
-					_putchar((res % 10) + '0');
+					more_than_100();
+					long_value(j);
 				}
-				else
-					_putchar((res % 10) + '0');
 			}
 			_putchar('\n');
 		}

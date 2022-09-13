@@ -1,9 +1,9 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * _isalpha - tests whether a character is from the English alphabet.
- * @c: character to be checked.
- * Return: 1 if the character is an English character.
- * 0 if the character is not an English character.
+ * _isalpha - function that check for alphabetic character
+ * @c: the input variable
+ * Return: 1 if c is a letter, lowercase or uppercase other wise 0
  */
 int _isalpha(int c)
 {
@@ -11,5 +11,4 @@ int _isalpha(int c)
 		return (1);
 	else
 		return (0);
-
 }
