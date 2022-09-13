@@ -2,7 +2,7 @@
 
 /**
  * main - it print the first 98 fibonacci numbers
- * Reutrn: 0
+ * Return: 0
  */
 int main(void)
 {
@@ -24,3 +24,4 @@ int main(void)
 	printf("\n");
 	return (0);
 }
+
