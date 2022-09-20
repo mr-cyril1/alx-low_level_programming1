@@ -1,1 +1,0 @@
-My first Hello_world in c programming language at ALX
