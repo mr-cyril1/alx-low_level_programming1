@@ -1,1 +1,0 @@
-This file contains example on C programming specifically (if, else and while) variable and a detail work through on the code
