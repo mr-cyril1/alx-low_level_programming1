@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main - prints random number and output it's state:wq
-
- * Return: Always 0.
+ * main - prints random number and states whether
+ *        it is positive, negative, or zero.
  *
+ * Return: Always 0
  */
 int main(void)
 {
@@ -14,9 +14,9 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	if ( n > 0 )
+	if (n > 0)
 	printf("%d is positive\n", n);
-	else if ( n < 0 )
+	else if (n < 0)
 	printf("%d is nagative\n", n);
 	else 
 
